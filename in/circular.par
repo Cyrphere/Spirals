@@ -1,0 +1,39 @@
+### Disk parameters
+
+AspectRatio     	0.1            Thickness over Radius in the disc
+Sigma0			1.0   	        Surface Density at r=1
+Viscosity		0.0		Uniform kinematic viscosity
+SigmaSlope		0.0		Slope of surface density profile.
+FlaringIndex            0.5			
+
+### Planet parameters
+
+PlanetConfig		in/Earth.cfg
+ThicknessSmoothing 	0.3		Smoothing parameters in disk thickness
+
+### Numerical method parameters
+
+Transport		FARGO
+InnerBoundary		NONREFLECTING	choose : OPEN or RIGID or NONREFLECTING
+Disk			YES
+Frame			Inertial
+IndirectTerm		NO
+
+
+### Mesh parameters
+
+Nrad			638		Radial number of zones
+Nsec			1024		Azimuthal number of zones (sectors)
+Rmin			0.1		Inner boundary radius
+Rmax			5.		Outer boundary radius
+RadialSpacing 		Logarithmic      Zone interfaces evenly spaced
+
+
+
+### Output control parameters
+
+Ntot			600		Total number of time steps
+Ninterm	 		1		Time steps between outputs
+DT			0.0314159265359	Time step length. 2PI = 1 orbit
+OutputDir		out2circular
+
